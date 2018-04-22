@@ -12,7 +12,7 @@
 
 <body>
   <div id="title" class="w3-container">
-    <a class="home" href="index.html"><h1><center>RIDVz- Recognizable Image Drawing and Visualization</center></h1></a>
+    <a class="home" href="index.php"><h1><center>RIDVz- Recognizable Image Drawing and Visualization</center></h1></a>
   </div>
     <div class="w3-container" id="mainButtons">
     <a href="#" class="btn-3d maroon " onclick="show_info()">Project Information</a>
