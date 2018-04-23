@@ -8,7 +8,7 @@
 <script src="./scripts/buttons.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
 <script src="https://d3js.org/d3-queue.v3.min.js"></script>
-<script src="./scripts/script.js"></script>
+<script src="./scripts/cluster.js"></script>
 
 <body>
   <div id="title" class="w3-container">
