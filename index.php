@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <title>RidViz</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <link rel="stylesheet" href="./styles/w3.css">
 <link rel="stylesheet" href="./styles/simple-style.css">
 <link rel="stylesheet" href="./styles/cool_buttons.css">
@@ -156,35 +156,35 @@
   <div class="w3-container" id="image_menu">
     <center>
   
-    <div class="hvrbox" id="cake" onclick="show_map_cluster_menu()">
+    <div class="hvrbox" id="cake" onclick="show_map_cluster_menu('cake')">
         <img src="/images/cake.png" alt="Cake" class="hvrbox-layer_bottom">
         <div class="hvrbox-layer_top">
 		      <div class="hvrbox-text">Cake</div>
 	      </div>
     </div>
     
-     <div class="hvrbox" id="dog" onclick="show_map_cluster_menu()">
+     <div class="hvrbox" id="dog" onclick="show_map_cluster_menu('dog')">
         <img src="/images/dog.png" alt="Dog" class="hvrbox-layer_bottom">
         <div class="hvrbox-layer_top">
 		      <div class="hvrbox-text">Dog</div>
 	      </div>
     </div>
     
-    <div class="hvrbox" id="house" onclick="show_map_cluster_menu()">
+    <div class="hvrbox" id="house" onclick="show_map_cluster_menu('house')">
         <img src="/images/house.png" alt="house" class="hvrbox-layer_bottom">
         <div class="hvrbox-layer_top">
 		      <div class="hvrbox-text">House</div>
 	      </div>
     </div>
     
-    <div class="hvrbox" id="hurricane" onclick="show_map_cluster_menu()">
+    <div class="hvrbox" id="hurricane" onclick="show_map_cluster_menu('tornado')">
         <img src="/images/hurricane.png" alt="hurricane" class="hvrbox-layer_bottom">
         <div class="hvrbox-layer_top">
 		      <div class="hvrbox-text">Hurricane</div>
 	      </div>
     </div>
     
-    <div class="hvrbox" id="face" onclick="show_map_cluster_menu()">
+    <div class="hvrbox" id="face" onclick="show_map_cluster_menu('face')">
         <img src="/images/myface.png" alt="face" class="hvrbox-layer_bottom">
         <div class="hvrbox-layer_top">
 		      <div class="hvrbox-text">Face</div>
