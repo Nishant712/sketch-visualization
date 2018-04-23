@@ -200,6 +200,11 @@ circle {
   display: none;
 }
 
+#evalDiv {
+  /*visibility: hidden;*/
+  display: none;
+}
+
 #map_cluster_choice_btns {
 	display: none;
 	background-color: white;

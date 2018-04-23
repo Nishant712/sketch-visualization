@@ -4,6 +4,7 @@ function show_info() {
     document.getElementById("image_menu").style = "display: none;";
     document.getElementById("chartDiv").style = "display: none;";
     document.getElementById("clusterDiv").style = "display: none;";
+    document.getElementById("evalDiv").style = "display: none;";
     document.getElementById("map_cluster_choice_btns").style = "display: none;";
     //document.getElementById("clusterDiv").style = "visibility: hidden;";
     
@@ -25,17 +26,28 @@ function show_map_cluster_menu(input_image) {
     document.getElementById("clusterDiv").style = "display: none;";
     document.getElementById("project_info").style = "display: none;";
     document.getElementById("mainButtons").style = "display: none;";
+    document.getElementById("evalDiv").style = "display: none;";
+    
+    var ele = document.getElementById("selected_image");
+    var att = document.createAttribute("data-current");
     if(input_image == 'face') {
         document.getElementById("selected_image").src = "./images/myface.png";
+        att.value = "face"; 
     } else if(input_image == 'cake') {
         document.getElementById("selected_image").src = "./images/cake.png";
+        att.value = "cake"; 
     } else if(input_image == 'dog') {
         document.getElementById("selected_image").src = "./images/dog.png";
+        att.value = "dog"; 
     } else if(input_image == 'tornado') {
         document.getElementById("selected_image").src = "./images/hurricane.png";
+        att.value = "tornado"; 
     } else if(input_image == 'house') {
         document.getElementById("selected_image").src = "./images/house.png";
+        att.value = "house"; 
     }
+    ele.setAttributeNode(att); 
+    console.log(ele.getAttribute("data-current"));
     load_choice(input_image);
 }
 

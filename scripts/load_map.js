@@ -1,6 +1,7 @@
 function show_map() {
     document.getElementById("chartDiv").style = "display: block;";
     document.getElementById("clusterDiv").style = "display: none;";
+    document.getElementById("evalDiv").style = "display: none;";
     
 }
 var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0),

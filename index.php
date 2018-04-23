@@ -195,9 +195,11 @@
   </div>
   
     <div class="w3-container" id="map_cluster_choice_btns">
-      <img src="/images/myface.png" id="selected_image" >
+      <img src="/images/myface.png" id="selected_image">
     <a href="#" class="btn-3d maroon " onclick="show_map()">Representative World Map</a>
     <a href="#" class="btn-3d maroon " onclick="show_cluster()">Country Clusters</a>
+    <a href="#" class="btn-3d maroon " onclick="show_evaluation()">Evaluation</a>
+    
   </div>
   
   
@@ -233,16 +235,18 @@
 <div class="infobox" style="visibility: hidden;">
   <h3 class="title">Country</h3>
 </div>
-<script>
-  d3.queue()
-    .defer(d3.csv, "data/house_cluster.csv")
-    .defer(d3.json, "data/continent-names.json")
-    .await(createBubbleChart);
-</script>
+
 
 </div>
 
 
-
+<div class="w3-container"  id="evalDiv">
+  <!--<span>-->
+  <!--  <label><input id="continents" type="radio" name="grouping" value="continents">Cluster</label>-->
+  <!--  <label><input id="country-centers" type="radio" name="grouping" value="country-centers">World Map</label>-->
+  <!--  <label><input id="population" type="radio" name="grouping" value="population">Population</label>-->
+  <!--</span>-->
+  </div>
+  
 </body>
 </html>
