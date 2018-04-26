@@ -119,10 +119,23 @@ svg {
 
 #chartDiv {
 	display: none;
-	color: #FF1493;
+	color: #000000;
 	background-color: white ;
 }
 
+#project_info {
+  column-count: 2;
+  font-family: Comic sans MS;
+  font-size: 20px;
+  column-rule-color: #630110 ;
+}
+
+h1 {
+  font-family: Comic sans MS;
+  color: #630110 
+  
+  
+}
 svg {
     width: 75%;
     float: right;
@@ -134,10 +147,10 @@ svg {
     width: 20%;
     padding: 30px;
     height: 80%;
-    opacity: 0.4;
+    /*opacity: ;*/
     position: absolute;
-    background-color: #FFEAEE;
-    font-size: 50px;
+    background-color: #ffffff;
+    font-size: 70px;
     float: right;
 }
 
@@ -170,7 +183,7 @@ span:nth-child(2) {
 }
 
 svg {
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
 }
 
 circle {
@@ -197,6 +210,7 @@ circle {
 #clusterDiv {
   /*visibility: hidden;*/
   display: none;
+  margin-top: 1%;
 }
 
 #evalDiv {
@@ -217,4 +231,13 @@ circle {
   height: 10%;
 }
 
-			
+.evalbutton {
+    background-color: #e7e7e7; 
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}			

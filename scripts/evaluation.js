@@ -15,7 +15,7 @@ function load_evaluation(input_image){
 var margin = {top: 40, right: 40, bottom: 30, left: 40};
   var width = 1280,
       height = 600;
-var padding = 200; 
+var padding = 100; 
 
 // set the ranges
 var x = d3.scaleBand()

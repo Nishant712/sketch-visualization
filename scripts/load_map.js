@@ -54,11 +54,6 @@ var map = svg.append("g")
     .attr("class", "map");
     
 
-    
-    
-    
-
-
 
 
 var chart = d3.select("#chartDiv")
