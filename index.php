@@ -9,6 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
 <script src="https://d3js.org/d3-queue.v3.min.js"></script>
 <script src="./scripts/cluster.js"></script>
+<script src="./scripts/evaluation.js"></script>
 
 <body>
   <div id="title" class="w3-container">
@@ -206,15 +207,14 @@
   <div class="w3-container"  id="chartDiv">
      <div class="details w3-container">
         <h2 class="country"></h2>
-        <div id="drawing">
-          
-        </div>
+        <div id="drawing"> </div>
       </div>
   </div>
+  
+  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="./scripts/load_map.js"></script>
-<script src="./scripts/drawing.js"></script>
 
 
 <div class="w3-container"  id="clusterDiv">
@@ -241,12 +241,44 @@
 
 
 <div class="w3-container"  id="evalDiv">
-  <!--<span>-->
-  <!--  <label><input id="continents" type="radio" name="grouping" value="continents">Cluster</label>-->
-  <!--  <label><input id="country-centers" type="radio" name="grouping" value="country-centers">World Map</label>-->
-  <!--  <label><input id="population" type="radio" name="grouping" value="population">Population</label>-->
-  <!--</span>-->
+    <center>
+    <div class="hvrbox" id="cake" onclick="load_evaluation('cake')">
+        <img src="/images/cake.png" alt="Cake" class="hvrbox-layer_bottom">
+        <div class="hvrbox-layer_top">
+		      <div class="hvrbox-text">Cake</div>
+	      </div>
+    </div>
+    
+     <div class="hvrbox" id="dog" onclick="load_evaluation('dog')">
+        <img src="/images/dog.png" alt="Dog" class="hvrbox-layer_bottom">
+        <div class="hvrbox-layer_top">
+		      <div class="hvrbox-text">Dog</div>
+	      </div>
+    </div>
+    <div class="hvrbox" id="house" onclick="load_evaluation('house')">
+        <img src="/images/house.png" alt="house" class="hvrbox-layer_bottom">
+        <div class="hvrbox-layer_top">
+		      <div class="hvrbox-text">House</div>
+	      </div>
+    </div>
+    <div class="hvrbox" id="hurricane" onclick="load_evaluation('tornado')">
+        <img src="/images/hurricane.png" alt="hurricane" class="hvrbox-layer_bottom">
+        <div class="hvrbox-layer_top">
+		      <div class="hvrbox-text">Hurricane</div>
+	      </div>
+    </div>
+    <div class="hvrbox" id="face" onclick="load_evaluation('face')">
+        <img src="/images/myface.png" alt="face" class="hvrbox-layer_bottom">
+        <div class="hvrbox-layer_top">
+		      <div class="hvrbox-text">Face</div>
+	      </div>
+    </div>
+    <div id="barchart"></div>
+
+    </center>
+         
   </div>
+  
   
 </body>
 </html>

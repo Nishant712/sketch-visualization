@@ -1,6 +1,9 @@
 function show_cluster() {
-    document.getElementById("clusterDiv").style = "display: block;";
+  
     document.getElementById("chartDiv").style = "display: none;";
+    document.getElementById("clusterDiv").style = "display: block;";
+    document.getElementById("evalDiv").style = "display: none;";
+    
     var ele = document.getElementById("selected_image");
     var curr = ele.getAttribute("data-current");
     var fileName = "data/1_" + curr + "_cluster.csv";
@@ -20,7 +23,7 @@ function createBubbleChart(error, countries, continentNames,clusterType) {
       populationScaleX,
       populationScaleY;
 
-  var continents = d3.set(countries.map(function(country) { return country.Geo_Cluster; }));
+  var continents = d3.set(countries.map(function(country) { return country.ContinentCode; }));
   var continentColorScale = d3.scaleOrdinal(d3.schemeCategory10)
         .domain(continents.values());
 
@@ -172,7 +175,7 @@ function createBubbleChart(error, countries, continentNames,clusterType) {
   function updateCircles() {
     circles
       .attr("fill", function(d) {
-        return flagFill() ? "url(#" + d.CountryCode + ")" : continentColorScale(d.Geo_Cluster);
+        return flagFill() ? "url(#" + d.CountryCode + ")" : continentColorScale(d.ContinentCode);
       });
   }
 
@@ -216,17 +219,15 @@ function createBubbleChart(error, countries, continentNames,clusterType) {
         y: d3.forceY(continentForceY).strength(forceStrength)
       };
 
-      function continentForceX(d) {
+function continentForceX(d) {
         if (d.ContinentCode === "EU") {
           return left(width);
         } else if (d.ContinentCode === "AF") {
           return left(width);
         } else if (d.ContinentCode === "AS") {
           return right(width);
-        } else if (d.ContinentCode === "NA" ) {
+        } else if (d.ContinentCode === "NA" || d.ContinentCode === "SA") {
           return right(width);
-        } else if (d.ContinentCode === "SA") {
-          return center(width);
         }
         return center(width);
       }
@@ -252,8 +253,8 @@ function createBubbleChart(error, countries, continentNames,clusterType) {
     }
 
     function createPopulationForces() {
-      var continentNamesDomain = continents.values().map(function(continentCode) {
-        return continentNames[continentCode];
+      var continentNamesDomain = continents.values().map(function(Geo_Cluster) {
+        return continentNames[Geo_Cluster];
       });
       var scaledPopulationMargin = circleSize.max;
 
@@ -267,7 +268,7 @@ function createBubbleChart(error, countries, continentNames,clusterType) {
       var centerCirclesInScaleBandOffset = populationScaleX.bandwidth() / 2;
       return {
         x: d3.forceX(function(d) {
-            return populationScaleX(continentNames[d.ContinentCode]) + centerCirclesInScaleBandOffset;
+            return populationScaleX(continentNames[d.Geo_Cluster]) + centerCirclesInScaleBandOffset;
           }).strength(forceStrength),
         y: d3.forceY(function(d) {
           return populationScaleY(d.Population);
