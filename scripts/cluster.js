@@ -28,6 +28,14 @@ function show_cluster() {
       d3.select("#bubble-chart svg").remove();
     }
     
+    var rad_buttons = document.getElementsByName('grouping');
+    for(var i = 0; i < rad_buttons.length; i++) {
+      rad_buttons[i].checked = false;
+    }
+    
+    document.getElementById('combine').checked = true;
+    
+    
     var clusterType = getClusterType();
     var type;
     if(clusterType == "Geo_Cluster") {
