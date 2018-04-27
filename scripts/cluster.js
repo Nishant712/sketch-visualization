@@ -108,7 +108,7 @@ function createBubbleChart(error, dataset) {
 	var clusterColorScale = d3.scaleOrdinal(d3.schemeCategory10)
 	    .domain(domain_type.values());
 
-	var width = 1000,
+	var width = 900,
 	  height = 600;
 	  
 	var svg,
@@ -189,7 +189,7 @@ function createBubbleChart(error, dataset) {
 	}
 
 	function createForces() {
-		var forceStrength = 0.05;//controls how fast circles transit
+		var forceStrength = 0.09;//controls how fast circles transit
 
 		forces = {
 		  combine:        createCombineForces(),
