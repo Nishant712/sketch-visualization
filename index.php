@@ -11,7 +11,7 @@
 <script src="https://d3js.org/d3-queue.v3.min.js"></script>
 <script src="./scripts/cluster.js"></script>
 <script src="./scripts/evaluation.js"></script>
-<script src="./scripts/ui_options.js"></script>
+<!--<script src="./scripts/ui_options.js"></script>-->
 
 <body>
   <div id="title" class="w3-container">
@@ -236,18 +236,18 @@
 
 <div class="w3-container"  id="clusterDiv">
 <div id="cluster_options">
-  <select id="cluster_dropdown" onchange="clusterOption()">
+  <select id="cluster_dropdown" onchange="show_cluster()">
     <option value="Geo_Cluster">All features</option>
     <option value="direction">Direction</option>
     <option value="time">Time</option>
   </select>
   <div style="display: block;">
     <span>
-      <!--<label><input id="combine" type="radio" name="grouping" value="combine" checked>Combine</label>-->
-      <label><input class="w3-radio" id="continents" type="radio" name="grouping" value="continents">Cluster</label>
-      <label><input class="w3-radio" id="country-centers" type="radio" name="grouping" value="country-centers">World Map</label>
-      <label><input class="w3-radio" id="population" type="radio" name="grouping" value="population">Population</label>
+      <label><input class="w3-radio cluster_grouping" id="combine" type="radio" name="grouping" value="combine" checked>Combine</label>
+      <label><input class="w3-radio cluster_grouping" id="cluster" type="radio" name="grouping" value="cluster">Cluster</label>
+      <label><input class="w3-radio cluster_grouping" id="country-centers" type="radio" name="grouping" value="country-centers">World Map</label>
     </span>
+    &nbsp;&nbsp;&nbsp;&nbsp;
     <span>
       <label><input class="w3-radio" id="colors" type="radio" name="fill" value="color-view" checked>color-view</label>
       <label><input class="w3-radio" id="flags" type="radio" name="fill" value="flag-view">flag-view</label>
