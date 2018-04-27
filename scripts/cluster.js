@@ -105,7 +105,7 @@ function createBubbleChart(error, dataset) {
 	  
 	var svg,
 	  circles,
-	  circleSize = { min: 10, max: 80 };
+	  circleSize = { min: 10, max: 60 };
 	  
 	var circleRadiusScale = d3.scaleSqrt()
 	.domain(populationExtent)
